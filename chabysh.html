@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-t="t.race">Chabysh horse race · IradLoto</title>
+<meta name="description" content="Chabysh, IradLoto's horse-race lottery: twelve horses, a race every evening at 19:30, win, forecast and tricast.">
+<link rel="canonical" href="https://loto.iradgov.org/chabysh.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="IradLoto">
+<meta property="og:url" content="https://loto.iradgov.org/chabysh.html">
+<meta property="og:title" content="Chabysh horse race · IradLoto">
+<meta property="og:description" content="Chabysh, IradLoto's horse-race lottery: twelve horses, a race every evening at 19:30, win, forecast and tricast.">
+<meta property="og:image" content="https://loto.iradgov.org/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://loto.iradgov.org/assets/og-image.jpg">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="assets/site.css">
+<script src="assets/i18n.js"></script>
+<script src="assets/loto.js"></script>
+<script src="assets/horse.js"></script>
+<script src="assets/site.js"></script>
+<script>window.goatcounter=new Object();goatcounter.path=p=>location.host+p;</script>
+<script data-goatcounter="https://irad.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QTS2XFLJD7"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QTS2XFLJD7');</script>
+</head>
+<body data-page="chabysh">
+<div id="top"></div>
+<div class="pagehead"><div class="wrap"><h1 data-t="ch.h1">Chabysh: the horse-race lottery</h1><p data-t="ch.p">Twelve horses, a race every evening at 19:30. The ball machine draws the finishing order and the race is run to match it. Pick the winner, the first two or the first three.</p></div></div>
+<main><div class="wrap">
+ <section class="card section">
+  <div class="row" style="justify-content:space-between;align-items:center"><h2 id="ch-title" style="margin:0"></h2>
+   <div class="row"><select id="ch-race" aria-label="Race"></select><button class="btn" id="ch-replay" data-t="ch.replay">Run it again</button></div></div>
+  <div class="track" id="track" style="margin-top:12px"></div>
+  <div id="podium"></div>
+ </section>
+ <div class="grid2">
+  <section class="card"><h2 data-t="ch.next.h">Next race</h2><p id="ch-next"></p><p class="small muted" data-t="h.closes">Ticket sales close in</p><div class="count light" id="ch-count"></div>
+   <table class="tbl"><thead><tr><th data-t="ch.bet">Bet</th><th data-t="ch.pays">Pays (5 som line)</th><th class="r" data-t="th.odds">Odds</th></tr></thead><tbody>
+    <tr><td data-t="ch.win">Winner</td><td>30 som</td><td class="r">1 : 12</td></tr>
+    <tr><td data-t="ch.forecast">Forecast: first two in order</td><td>330 som</td><td class="r">1 : 132</td></tr>
+    <tr><td data-t="ch.tricast">Tricast: first three in order</td><td>3,300 som</td><td class="r">1 : 1,320</td></tr></tbody></table>
+  </section>
+  <section class="card"><h2 data-t="ch.check.h">Check a bet</h2>
+   <div class="tabs" id="bt-type"><button data-k="win" data-t="ch.win">Winner</button><button data-k="forecast" data-t="ch.forecast.s">Forecast</button><button data-k="tricast" data-t="ch.tricast.s">Tricast</button></div>
+   <label for="bt-race" data-t="c.draw">Draw</label><select id="bt-race"></select>
+   <p class="small muted" id="bt-hint"></p><div class="betgrid" id="bt-grid"></div>
+   <button class="btn" id="bt-go" data-t="b.go">Check</button><div id="bt-result"></div>
+  </section>
+ </div>
+ <section class="card section"><h2 data-t="ch.stable.h">The twelve horses</h2>
+  <p class="small muted" data-t="ch.stable.p">The horses are the lottery's own: drawn, not run, so every one has the same chance in every race. Form is the last five finishes.</p>
+  <div class="scroll"><table class="tbl"><thead><tr><th></th><th data-t="ch.horse">Horse</th><th data-t="ch.form">Form</th><th class="r" data-t="ch.wins">Wins since 2023</th></tr></thead><tbody id="stable"></tbody></table></div>
+ </section>
+ <section class="section"><h2 data-t="ch.recent">Recent races</h2>
+  <div class="scroll"><table class="tbl"><thead><tr><th data-t="th.no">No.</th><th data-t="th.date">Date</th><th data-t="ch.first3">First three</th><th class="r" data-t="ch.tricast.w">Tricast winners</th></tr></thead><tbody id="ch-list"></tbody></table></div>
+ </section>
+ <p class="small muted" data-t="ch.note">Chabysh is a lottery, not a bet on real horses: the result comes from the ball machine before the Draw Commission, as in every IradLoto game. Betting on real races is legal only at the Hippodrome tote.</p>
+</div></main>
+<div id="foot"></div>
+</body>
+</html>

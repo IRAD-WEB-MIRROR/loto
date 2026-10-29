@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-t="t.check">Check your ticket · IradLoto</title>
+<meta name="description" content="Check an IradLoto ticket by its number or by your numbers.">
+<link rel="canonical" href="https://loto.iradgov.org/check.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="IradLoto">
+<meta property="og:url" content="https://loto.iradgov.org/check.html">
+<meta property="og:title" content="Check your ticket · IradLoto">
+<meta property="og:description" content="Check an IradLoto ticket by its number or by your numbers.">
+<meta property="og:image" content="https://loto.iradgov.org/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://loto.iradgov.org/assets/og-image.jpg">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="assets/site.css">
+<script src="assets/i18n.js"></script>
+<script src="assets/loto.js"></script>
+<script src="assets/horse.js"></script>
+<script src="assets/site.js"></script>
+<script>window.goatcounter=new Object();goatcounter.path=p=>location.host+p;</script>
+<script data-goatcounter="https://irad.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QTS2XFLJD7"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QTS2XFLJD7');</script>
+</head>
+<body data-page="check">
+<div id="top"></div>
+<div class="pagehead"><div class="wrap"><h1 data-t="c.h1">Check your ticket</h1><p data-t="c.p">Check by the ticket number or by your own numbers.</p></div></div>
+<main><div class="wrap">
+ <section class="card section" id="my" hidden><h2 data-t="my.h">My tickets</h2>
+  <p class="small muted" data-t="my.p">Tickets you keep are saved in this browser only, not with IradLoto. After each draw they are checked here. A prize is paid only against the paper ticket.</p>
+  <div class="scroll"><table class="tbl"><tbody id="my-list"></tbody></table></div>
+ </section>
+ <section class="card section"><h2 data-t="c.serial.h">By ticket number</h2>
+  <p class="small muted" data-t="serial.help.p">The number is printed under the barcode: two letters, then 4, 4, 5 and 1 digits, for example AB-0760-1412-03321-7.</p>
+  <form id="by-serial" class="row"><div style="flex:1;min-width:220px"><input type="text" id="serial" placeholder="AB-0760-1412-03321-7" style="width:100%" autocomplete="off"></div><button class="btn" data-t="b.go">Check</button></form>
+  <div id="serial-result"></div>
+ </section>
+ <section class="card section"><h2 data-t="c.num.h">By your numbers</h2>
+  <p class="small muted" data-t="c.num.p">Choose the game and the draw, then mark the numbers on your ticket.</p>
+  <div class="row"><div><label for="ck-game" data-t="c.game">Game</label><select id="ck-game"></select></div><div><label for="ck-draw" data-t="c.draw">Draw</label><select id="ck-draw"></select></div></div>
+  <div class="picker" id="ck-grid"></div>
+  <p class="small muted" id="ck-count"></p>
+  <div class="row"><button type="button" class="btn ghost" id="ck-quick" data-t="b.quick">Quick pick</button><button type="button" class="btn ghost" id="ck-clear" data-t="b.clear">Clear</button><button type="button" class="btn" id="ck-go" data-t="b.go">Check</button></div>
+  <div id="ck-result"></div>
+ </section>
+ <p class="small muted" data-t="c.note">This check is for information. A prize is paid only against the paper ticket; the Draw Commission's record is the official result.</p>
+ <section class="card section"><h2 data-t="claim.h">Claiming a prize over 5,000 som</h2>
+  <p data-t="claim.p">Prizes up to 5,000 som are paid at any point of sale or post office. Larger prizes are claimed in person at the Prize Payment Office, Pochtamt Street 9, Talas, with the paper ticket, your identity card and the completed claim form. Prizes over 50,000 som are paid only by bank transfer.</p>
+  <p><a class="btn ghost" href="https://e-irad.org/forms/LT-5.pdf" data-t="claim.a">Prize claim form LT-5 (PDF)</a> <a href="https://e-irad.org/forms.html?body=loto" data-t="claim.all">Other forms on e-Irad</a></p></section>
+</div></main>
+<div id="foot"></div>
+</body>
+</html>

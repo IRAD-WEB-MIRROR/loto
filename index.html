@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-t="t.home">IradLoto: the state lottery of Irad</title>
+<meta name="description" content="IradLoto, the state lottery of Irad: Altın Bayge, Joguru! and Tört Tuyak draw results, jackpots, ticket checker and winners.">
+<link rel="canonical" href="https://loto.iradgov.org/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="IradLoto">
+<meta property="og:url" content="https://loto.iradgov.org/">
+<meta property="og:title" content="IradLoto: the state lottery of Irad">
+<meta property="og:description" content="IradLoto, the state lottery of Irad: Altın Bayge, Joguru! and Tört Tuyak draw results, jackpots, ticket checker and winners.">
+<meta property="og:image" content="https://loto.iradgov.org/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://loto.iradgov.org/assets/og-image.jpg">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="assets/site.css">
+<script src="assets/i18n.js"></script>
+<script src="assets/loto.js"></script>
+<script src="assets/horse.js"></script>
+<script src="assets/site.js"></script>
+<script>window.goatcounter=new Object();goatcounter.path=p=>location.host+p;</script>
+<script data-goatcounter="https://irad.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QTS2XFLJD7"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QTS2XFLJD7');</script>
+</head>
+<body data-page="home">
+<div id="top"></div>
+<section class="hero"><div class="wrap">
+ <div>
+  <div class="kicker" data-t="h.kicker">Altın Bayge · 6 of 45</div>
+  <h2 style="margin:6px 0 0" data-t="h.jp">Jackpot this Saturday</h2>
+  <div class="jp" id="hero-jp">&nbsp;</div>
+  <div id="hero-badge"></div>
+  <p id="hero-when" style="margin:10px 0 0"></p>
+  <p class="small" style="margin:12px 0 0;color:#d9cdf2" data-t="h.closes">Ticket sales close in</p>
+  <div class="count" id="hero-count"></div>
+  <p class="small" style="color:#d9cdf2" data-t="h.tv">The draw is live on IradOne every Saturday at 20:30.</p>
+  <p><a class="btn" href="check.html" data-t="b.check">Check your ticket</a> <a class="btn alt" href="results.html" data-t="b.results">All results</a></p>
+ </div>
+ <div class="side" id="hero-last"></div>
+</div></section>
+<section class="strip-wrap"><div class="wrap"><h2 data-t="strip.h">You could win, tear a ticket to see how to play!</h2></div><div id="strip"></div></section>
+<main><div class="wrap">
+ <div class="notice" data-t="n.online"><b>IradLoto does not sell tickets on the internet.</b> By law, tickets are sold only by licensed retailers. "Online loto" offers on Tulpar or on websites are illegal.</div>
+ <section class="section"><h2><span data-t="s.games">Our games</span> <a href="games.html" data-t="l.games">Games and odds</a></h2>
+  <div class="grid4" id="games"></div></section>
+ <div class="grid2">
+  <section class="card"><h2 data-t="s.check">Check your ticket</h2>
+   <p data-t="s.check.p">Type the number printed under the barcode.</p>
+   <form id="quick" class="row"><div style="flex:1;min-width:200px"><input type="text" id="quick-serial" placeholder="AB-0760-1412-03321-7" style="width:100%" autocomplete="off"></div><button class="btn" data-t="b.go">Check</button></form>
+  </section>
+  <section class="card"><h2 data-t="s.fund">Where the money goes</h2>
+   <p data-t="s.fund.p">Part of every ticket goes to the Sport and Youth Fund: school sports grounds, fields for the horse games in the districts, and the Irad League youth cup.</p>
+   <div id="fund"></div><p><a href="about.html#money" data-t="l.about">More</a></p>
+  </section>
+ </div>
+ <section class="section"><h2><span data-t="s.big">Recent jackpots</span> <a href="winners.html" data-t="l.winners">All winners</a></h2>
+  <div class="scroll"><table class="tbl"><thead><tr><th data-t="th.date">Date</th><th data-t="th.game">Game</th><th class="r" data-t="th.prize">Prize</th><th data-t="th.where">Sold in</th></tr></thead><tbody id="bigwins"></tbody></table></div></section>
+</div></main>
+<div id="foot"></div>
+</body>
+</html>
