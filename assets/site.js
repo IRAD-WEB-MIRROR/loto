@@ -41,6 +41,29 @@
   /* ---------- chrome ---------- */
   var NAV = [["index.html", "nav.home", "Home"], ["games.html", "nav.games", "Games"], ["chabysh.html", "nav.race", "Horse race"], ["results.html", "nav.results", "Results"],
     ["check.html", "nav.check", "Check a ticket"], ["winners.html", "nav.winners", "Winners"], ["buy.html", "nav.buy", "Where to buy"], ["about.html", "nav.about", "About us"]];
+  /* the Enterprise's own pages: leadership, contacts, news, documents, vacancies, FAQ */
+  var KIT = ["leadership", "contacts", "news", "documents", "vacancies", "faq"];
+  var S = window.SITE_I18N || { ui: {}, pages: {} };
+  function K(k) {
+    if (I[k] && I[k][li]) return I[k][li];
+    var p = (S.pages || {})[lang] || {}, u = (S.ui || {})[lang] || {};
+    return p[k] || u[k] || (I[k] && I[k][0]) || null;
+  }
+  function kitText() {
+    $$("[data-i18n]").forEach(function (el) { if (lang !== "en") { var v = K(el.getAttribute("data-i18n")); if (v) el.innerHTML = v; } });
+    $$("[data-date]").forEach(function (el) {
+      var p = el.getAttribute("data-date").split("-");
+      if (lang !== "en") el.textContent = p[2] + "." + p[1] + "." + p[0];
+    });
+    var tk = document.body.getAttribute("data-title");
+    if (tk && lang !== "en") { var tt = K("title_" + tk); if (tt) document.title = tt.replace(/<[^>]+>/g, "") + " | " + T("kit_nav"); }
+    var today = new Date(Date.now() + L.TZ).toISOString().slice(0, 10);
+    $$("[data-closes]").forEach(function (v) {
+      if (v.getAttribute("data-closes") < today && !$(".kit-cl", v)) {
+        var h = $("header", v); if (h) h.insertAdjacentHTML("beforeend", ' <span class="badge kit-cl">' + esc(K("kit_isclosed") || "Competition closed") + "</span>");
+      }
+    });
+  }
   function chrome() {
     var page = (location.pathname.split("/").pop() || "index.html");
     var head = document.getElementById("top");
@@ -48,9 +71,9 @@
       head.innerHTML =
         '<div class="strip"><div class="wrap"><span>' + T("strip") + '</span><span class="lang">' +
         LANGS.map(function (l) { return '<a href="#" data-lang="' + l + '" class="' + (l === lang ? "on" : "") + '">' + l.toUpperCase() + "</a>"; }).join("") +
-        '</span></div></div><header class="top"><div class="wrap"><a class="logo" href="index.html"><img src="assets/logo.svg" alt="IradLoto" width="137" height="46"></a>' +
+        '</span></div></div><header class="top"><div class="wrap"><a class="logo" href="/"><img src="/assets/logo.svg" alt="IradLoto" width="137" height="46"></a>' +
         '<button class="burger" aria-label="Menu">&#9776;</button><nav class="main">' +
-        NAV.map(function (n) { return '<a href="' + n[0] + '"' + (n[0] === page ? ' class="on"' : "") + ">" + T(n[1]) + "</a>"; }).join("") +
+        NAV.map(function (n) { return '<a href="/' + n[0] + '"' + (n[0] === page ? ' class="on"' : "") + ">" + T(n[1]) + "</a>"; }).join("") +
         "</nav></div></header>";
       $(".burger", head).onclick = function () { $("nav.main", head).classList.toggle("open"); };
       $$("[data-lang]", head).forEach(function (a) {
@@ -65,7 +88,8 @@
     if (foot) {
       foot.innerHTML = '<footer class="foot"><div class="wrap cols"><div><p><span class="age">18+</span>' + T("foot.play") + "</p><p>" + T("foot.legal") +
         "</p><p class=\"small\">&copy; 2012&ndash;" + new Date().getFullYear() + " " + T("foot.copy") + "</p></div><div><b>" + T("foot.contact") +
-        "</b><br>" + T("foot.addr") + '<br>+996-39-2-25-55-55<br><a href="mailto:info@loto.iradgov.org">info@loto.iradgov.org</a><br><a href="mailto:prizes@loto.iradgov.org">prizes@loto.iradgov.org</a></div><div><b>' +
+        "</b><br>" + T("foot.addr") + '<br>+996-39-2-25-55-55<br><a href="mailto:info@loto.iradgov.org">info@loto.iradgov.org</a><br><a href="mailto:prizes@loto.iradgov.org">prizes@loto.iradgov.org</a><br><br>' +
+        KIT.map(function (k) { return '<a href="/' + k + '.html">' + esc(K("kit_nav_" + k) || k) + "</a>"; }).join("<br>") + '</div><div><b>' +
         T("foot.links") + '</b><br><a href="https://iradgov.org/">iradgov.org</a><br><a href="https://stats.iradgov.org/">' + T("foot.stats") +
         '</a><br><a href="https://iradone.com/">IradOne</a><br><a href="https://post.iradgov.org/">Irad Pochtasy</a><br><a href="https://e-irad.org/forms.html">' + T("foot.forms") + '</a><br><a href="https://tender.e-irad.org/">' + T("foot.tender") + '</a></div></div></footer>';
     }
@@ -74,6 +98,7 @@
       var v = I[el.getAttribute("data-t")];
       if (v && v[li]) el.innerHTML = v[li];
     });
+    kitText();
     var t = document.querySelector("title");
     if (t && t.getAttribute("data-t") && I[t.getAttribute("data-t")] && I[t.getAttribute("data-t")][li]) document.title = I[t.getAttribute("data-t")][li];
   }

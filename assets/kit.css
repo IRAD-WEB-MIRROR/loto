@@ -1,0 +1,24 @@
+/* leadership, contacts, news, documents, vacancies and FAQ pages */
+.kit-head { margin-bottom: 10px; }
+.kit-post { color: var(--muted, #666); margin: -4px 0 14px; }
+.kit-thumb { float: right; width: 72px; height: auto; margin: 0 0 8px 12px; border: 1px solid var(--line, #ddd); }
+.kit-year { margin: 30px 0 6px; font-size: 1.2rem; border-bottom: 2px solid var(--blue, #2b4c7e); padding-bottom: 4px; }
+.kit-faq { background: #fff; border: 1px solid var(--line, #ddd); margin: 0 0 8px; }
+.kit-faq summary { cursor: pointer; padding: 12px 16px; font-weight: 600; }
+.kit-faq[open] summary { border-bottom: 1px solid var(--line, #ddd); }
+.kit-faq > div { padding: 4px 16px 6px; }
+.kit-phones td { padding: 6px 4px; }
+.kit-vac.is-closed { opacity: .65; }
+.kit-fulldoc .body p { max-width: 780px; }
+.kit-home { margin-top: 10px; padding-bottom: 10px; }
+.kit-home .plist .s { display: none; }
+.nw { white-space: nowrap; }
+
+/* menu dropdown for sites whose own sheet has none */
+.nav .dd { position: relative; list-style: none; }
+.nav .dd-btn { background: none; border: 0; color: inherit; font: inherit; cursor: pointer; padding: inherit; }
+.nav .sub { display: none; position: absolute; left: 0; top: 100%; z-index: 20; min-width: 220px; margin: 0; padding: 4px 0; list-style: none; background: #fff; border: 1px solid #999; box-shadow: 0 4px 10px rgba(0,0,0,.2); }
+.nav .sub a { display: block; padding: 7px 14px; white-space: nowrap; }
+.nav .dd.open > .sub { display: block; }
+@media (hover: hover) and (min-width: 961px) { .nav .dd:hover > .sub { display: block; } }
+@media (max-width: 960px) { .nav .sub { position: static; box-shadow: none; border: 0; border-left: 3px solid #999; margin-left: 10px; } }

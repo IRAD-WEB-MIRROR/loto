@@ -306,5 +306,32 @@ window.I18N = {
   "my.won": ["Won {p}", "Uttu: {p}", "Выигрыш: {p}"],
   "my.none": ["No win", "Utuş jok", "Без выигрыша"],
   "my.old": ["Prize expired", "Utuş möönötü ötkön", "Срок получения истёк"],
-  "my.win.n": ["{n} of your kept tickets won. <a href=\"check.html#my\">See My tickets</a>.", "Saktalgan biletteriñizden {n} utuş berdi. <a href=\"check.html#my\">Menin biletterim</a>.", "Выиграли сохранённые билеты: {n}. <a href=\"check.html#my\">Мои билеты</a>."]
+  "my.win.n": ["{n} of your kept tickets won. <a href=\"check.html#my\">See My tickets</a>.", "Saktalgan biletteriñizden {n} utuş berdi. <a href=\"check.html#my\">Menin biletterim</a>.", "Выиграли сохранённые билеты: {n}. <a href=\"check.html#my\">Мои билеты</a>."],
+  /* leadership, contacts, news, documents, vacancies and FAQ pages (their own text is in kit.js) */
+  "kit_nav": ["IradLoto", "IradLoto", "ИрадЛото"],
+  "kit_home": ["Home", "Başkı bet", "Главная"],
+  "kit_nav_leadership": ["Leadership", "Jetekçilik", "Руководство"],
+  "kit_nav_contacts": ["Contacts and reception", "Baylanış jana kabıl aluu", "Контакты и приём граждан"],
+  "kit_nav_news": ["News", "Jañılıktar", "Новости"],
+  "kit_nav_documents": ["Documents and legal acts", "Dokumentter jana ukuktuk aktılar", "Документы и правовые акты"],
+  "kit_nav_vacancies": ["Vacancies", "Boş orundar", "Вакансии"],
+  "kit_nav_faq": ["Questions and answers", "Suroolor jana jooptor", "Вопросы и ответы"],
+  "kit_h_news": ["Press service news", "Basma kızmatınıñ jañılıktarı", "Новости пресс-службы"],
+  "kit_deputies": ["Deputies and officials", "Orun basarlar jana kızmatkerler", "Заместители и должностные лица"],
+  "kit_reception": ["Reception of citizens", "Jarandardı kabıl aluu", "Приём граждан"],
+  "kit_when": ["When", "Kaçan", "Когда"],
+  "kit_phones": ["Telephones", "Telefondor", "Телефоны"],
+  "kit_email": ["E-mail", "E-poçta", "Электронная почта"],
+  "kit_hours": ["Office hours", "İş saattarı", "Часы работы"],
+  "kit_travel": ["How to get here", "Kantip jetüügö bolot", "Как добраться"],
+  "kit_othernews": ["Other news", "Başka jañılıktar", "Другие новости"],
+  "kit_homenews": ["From the press service", "Basma kızmatınan", "Сообщения пресс-службы"],
+  "kit_open": ["Open competitions", "Açık konkurstar", "Открытые конкурсы"],
+  "kit_noopen": ["There are no open competitions at present.", "Azır açık konkurs jok.", "В настоящее время открытых конкурсов нет."],
+  "kit_place": ["Place of work", "İş ordu", "Место работы"],
+  "kit_how": ["How to apply", "Kantip arız berüü kerek", "Как подать документы"],
+  "a.kit.h": ["IradLoto as an enterprise", "IradLoto işkana katarı", "ИрадЛото как предприятие"],
+  "a.kit.p": ["The Enterprise's management, reception hours, press releases, the rules of the games and the vacancies:", "İşkananın jetekçiligi, kabıl aluu saattarı, basma bildirüüleri, oyundardın erejeleri jana boş orundar:", "Руководство предприятия, часы приёма, пресс-релизы, правила игр и вакансии:"]
 };
+/* text for the press and document pages is merged in here by kit.js */
+window.SITE_I18N = window.SITE_I18N || { ui: {}, pages: {} };
