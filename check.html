@@ -43,6 +43,7 @@
   <form id="by-serial" class="row"><div style="flex:1;min-width:220px"><input type="text" id="serial" placeholder="AB-0760-1412-03321-7" style="width:100%" autocomplete="off"></div><button class="btn" data-t="b.go">Check</button></form>
   <div id="serial-result"></div>
  </section>
+ <section class="card section" id="slip"><h2>By e-Irad temporary slip</h2><p>Lost a ticket bought with your e-Irad slip? Enter the slip number: the ticket registered to it is checked for you.</p><div data-irad-slip="ticket" data-fill="#serial" data-btn-class="btn"></div></section>
  <section class="card section"><h2 data-t="c.num.h">By your numbers</h2>
   <p class="small muted" data-t="c.num.p">Choose the game and the draw, then mark the numbers on your ticket.</p>
   <div class="row"><div><label for="ck-game" data-t="c.game">Game</label><select id="ck-game"></select></div><div><label for="ck-draw" data-t="c.draw">Draw</label><select id="ck-draw"></select></div></div>
@@ -57,5 +58,6 @@
   <p><a class="btn ghost" href="https://e-irad.org/forms/LT-5.pdf" data-t="claim.a">Prize claim form LT-5 (PDF)</a> <a href="https://e-irad.org/forms.html?body=loto" data-t="claim.all">Other forms on e-Irad</a></p></section>
 </div></main>
 <div id="foot"></div>
+<script src="https://e-irad.org/assets/slip.js" defer></script>
 </body>
 </html>
