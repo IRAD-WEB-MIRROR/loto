@@ -150,6 +150,9 @@
     return out;
   }
 
+  // The balls of draw `no` in the order they come out of the machine (the same numbers the results show).
+  function drawBalls(gid, no) { return balls(rng(h32(gid + ":" + no)), GAMES[gid]); }
+
   function nextDraw(gid, now) {
     now = now || Date.now();
     var g = GAMES[gid], h = history(gid, now), last = h[h.length - 1];
@@ -310,7 +313,7 @@
 
   window.Loto = {
     GAMES: GAMES, ORDER: ORDER, TYIN: TYIN, DAY: DAY, TZ: TZ,
-    history: history, nextDraw: nextDraw, getDraw: getDraw, score: score, pMatch: pMatch,
+    history: history, nextDraw: nextDraw, drawBalls: drawBalls, getDraw: getDraw, score: score, pMatch: pMatch,
     parseSerial: parseSerial, makeSerial: makeSerial, winners: winners, tyinState: tyinState,
     RACE: RACE, raceHistory: raceHistory, nextRace: nextRace, raceScore: raceScore, getRace: getRace,
     dayOf: dayOf, isoOf: isoOf, weekday: weekday, todayTalas: todayTalas, h32: h32, rng: rng
