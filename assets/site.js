@@ -4,7 +4,7 @@
   var L = window.Loto, I = window.I18N || {};
   var LANGS = ["en", "ir", "ru"];
   var lang = "en";
-  try { lang = localStorage.getItem("loto-lang") || "en"; } catch (e) {}
+  try { lang = localStorage.getItem("loto-lang") || "ir"; } catch (e) { lang = "ir"; }
   var qs = location.search.match(/[?&]lang=(en|ir|ru)/);
   if (qs) lang = qs[1];
   if (LANGS.indexOf(lang) < 0) lang = "en";
